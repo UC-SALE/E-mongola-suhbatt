@@ -2,8 +2,14 @@
 <html lang="mn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- viewport-fit=cover нь iPhone-ийн notch (дэлгэцний дээрх сэвтэй) хэсгийг бүтэн ашиглахад тусална -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Popup Split Control</title>
+
+<!-- === iOS Fullscreen (No Toolbar) Тохиргоо === -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My App">
 
 <!-- === HOME SCREEN ICON НЭМЭХ ХЭСЭГ === -->
 <link rel="apple-touch-icon" href="icon.png">
@@ -15,6 +21,8 @@ html,body{
     padding:0;
     height:100%;
     overflow:hidden;
+    /* iOS дээр хуруугаар татахад дэлгэц ойж хөдлөхөөс сэргийлнэ */
+    overscroll-behavior: none;
 }
 
 .background{
